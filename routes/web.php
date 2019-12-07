@@ -11,15 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () { 
+//     return view('index');
+// });
 
-Route::get('/about', function(){
-    $nama = "Resthiana Aisyah Shareen Malik";
-    return view('about', ['nama' => $nama]);
-});
+// Route::get('/about', function(){
+//     $nama = "Resthiana Aisyah Shareen Malik";
+//     return view('about', ['nama' => $nama]);
+// });
 
-Route::get('/mahasiswa', function(){
-    return view('mahasiswa');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/mahasiswa', 'MahasiswaController@index');
